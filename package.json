@@ -1,40 +1,43 @@
 {
-  "name": "react-vite-template",
-  "version": "1.0.0",
-  "type": "module",
-  "author": "Nabhag8848",
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@vercel/analytics": "^1.5.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.1",
+    "web-vitals": "^2.1.4"
+  },
   "scripts": {
-    "dev": "vite --port 3001",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "dev": "vite",
+    "build": "vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@vercel/speed-insights": "^1.2.0",
-    "motion": "^12.6.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-error-boundary": "^5.0.0",
-    "react-helmet-async": "^2.0.5",
-    "react-router": "^7.5.0"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "@eslint/js": "^9.21.0",
-    "@types/node": "^22.14.1",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.21.0",
-    "eslint-plugin-react-dom": "^1.40.4",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "eslint-plugin-react-x": "^1.40.4",
-    "globals": "^15.15.0",
-    "typescript": "~5.7.2",
-    "typescript-eslint": "^8.24.1",
-    "vite": "^6.2.0"
-  },
-  "packageManager": "pnpm@9.6.0+sha512.38dc6fba8dba35b39340b9700112c2fe1e12f10b17134715a4aa98ccf7bb035e76fd981cf0bb384dfa98f8d6af5481c2bef2f4266a24bfa20c34eb7147ce0b5e"
+    "@vitejs/plugin-react": "^5.0.4",
+    "vite": "^7.1.11"
+  }
 }
