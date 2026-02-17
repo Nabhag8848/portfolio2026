@@ -26,7 +26,7 @@ function MiddleColumn() {
 
   return (
     <div>
-      <p>
+      <p className="experience-desc">
         I began my career by building four integrations for an Investing
         Monitoring Tool. Since then, have spent time specializing in the work of
         integrations, which I find demanding cause 90% of SaaS is just building
@@ -34,7 +34,7 @@ function MiddleColumn() {
         in building integrations, marketplace apps and could be the best choice
         for your needs.
       </p>
-      <p>
+      <p className="experience-desc">
         For more details, check out my{" "}
         <Link className="green-link" to="/resume">
           resume
