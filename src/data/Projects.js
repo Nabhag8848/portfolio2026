@@ -9,6 +9,7 @@ export const projects = [
     type: "video",
     src: "/assets/LYO/lyo-video.mp4",
     category: "tools",
+    status: "active",
     clickable: true,
     component: GenericProject,
     about:
@@ -19,13 +20,31 @@ export const projects = [
     demoLink: "https://x.com/NabhagMotivaras/status/2008835655355551829?s=20",
   },
   {
+    id: "pg-agent",
+    title: "pg-agent",
+    desc: "terminal AI for PostgreSQL",
+    date: "",
+    type: "video",
+    src: "/assets/pg-agent/pg-agent.mp4",
+    category: "tools",
+    status: "completed",
+    clickable: true,
+    component: GenericProject,
+    about:
+      "Ask your PostgreSQL database questions in plain English - directly from the terminal. A terminal-based AI agent that classifies your prompt, pulls the live PostgreSQL schema, generates SQL, executes it, and explains results in natural language. It automatically guards read/write intent, runs counts for large result sets, and limits output for clarity.",
+    tech: ["Agent SDK", "React Ink", "NestJS", "PostgreSQL"],
+    link: null,
+    gh: "https://github.com/nabhag8848/pg-agent",
+  },
+  {
     id: "notion-integration",
-    title: "Notion for Rocket.Chat",
-    desc: "GSoC integration",
+    title: "Notion x Rocket.Chat",
+    desc: "Rocketchat App",
     date: "",
     type: "video",
     src: "/assets/Notion/notion.mp4",
     category: "integrations",
+    status: "completed",
     clickable: true,
     component: GenericProject,
     about:
@@ -42,6 +61,7 @@ export const projects = [
     type: "video",
     src: "/assets/twenty/raycast.mp4",
     category: "extensions",
+    status: "active",
     clickable: true,
     component: GenericProject,
     about:
@@ -53,11 +73,12 @@ export const projects = [
   {
     id: "ai-integration",
     title: "AI Meme Bot",
-    desc: "AI integration for Rocket.Chat",
+    desc: "Rocketchat App",
     date: "",
     type: "image",
     src: "/assets/meme-bot/meme.gif",
     category: "integrations",
+    status: "completed",
     clickable: true,
     component: GenericProject,
     about:
@@ -74,6 +95,7 @@ export const projects = [
     type: "video",
     src: "/assets/Financial/qbo.mov",
     category: "integrations",
+    status: "completed",
     clickable: true,
     component: GenericProject,
     about:
@@ -90,6 +112,7 @@ export const projects = [
     type: "video",
     src: "/assets/clinics/nearby-clinics.mov",
     category: "tools",
+    status: "completed",
     clickable: true,
     component: GenericProject,
     about:
@@ -107,6 +130,7 @@ export const projects = [
     type: "video",
     src: "/assets/covercraft/figma.mov",
     category: "extensions",
+    status: "active",
     clickable: true,
     component: GenericProject,
     about:
@@ -123,6 +147,7 @@ export const projects = [
     type: "video",
     src: "/assets/openstatus/openstatus.mov",
     category: "extensions",
+    status: "completed",
     clickable: true,
     component: GenericProject,
     about:
@@ -139,6 +164,7 @@ export const projects = [
     type: "video",
     src: "/assets/carrier/ups.mov",
     category: "integrations",
+    status: "completed",
     clickable: true,
     component: GenericProject,
     about:
@@ -155,6 +181,7 @@ export const projects = [
     type: "image",
     src: "/assets/marketplace/mcp.jpg",
     category: "tools",
+    status: "experiment",
     clickable: true,
     component: GenericProject,
     about:
@@ -163,6 +190,7 @@ export const projects = [
     link: null,
     gh: "https://github.com/Nabhag8848/mcp-marketplace",
   },
+ 
   {
     id: "monorepo-template",
     title: "Monorepo Template",
@@ -171,6 +199,7 @@ export const projects = [
     type: "image",
     src: "/assets/marketplace/template.png",
     category: "templates",
+    status: "completed",
     clickable: true,
     component: GenericProject,
     about:

@@ -500,7 +500,8 @@ a {
 
 .project-row {
   display: grid;
-  grid-template-columns: 1.25fr 2fr 0.3fr;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 2fr) 10ch;
+  column-gap: 12px;
   margin-bottom: 3px;
   align-items: center;
   padding: 0px 0;
@@ -510,6 +511,15 @@ a {
   min-width: fit-content;
 }
 
+.project-row > div {
+  min-width: 0;
+}
+
+.project-time {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .project-row:hover {
   background: rgba(255, 255, 255, 0.02);
   cursor: pointer;
@@ -517,6 +527,10 @@ a {
 
 .time-text {
   color: #666;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .status-badge {
@@ -525,21 +539,34 @@ a {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.5px;
+  text-transform: lowercase;
+  min-width: 10ch;
+  text-align: center;
 }
 
-.new-badge {
-  background: #dc5a2b;
-  color: #481d00;
+.status-live {
+  background: #2e7d32;
+  color: #e8f5e9;
 }
 
-.wip-badge {
-  background: #edca2b;
-  color: #6c4f00;
-}
-
-.cs-badge {
+.status-active {
   background: #3d93cc;
-  color: #092f48;
+  color: #e7f3ff;
+}
+
+.status-completed {
+  background: #3a3a3a;
+  color: #e0e0e0;
+}
+
+.status-pivot {
+  background: #a35b1f;
+  color: #fff3e0;
+}
+
+.status-experiment {
+  background: #6a4fb3;
+  color: #f3e9ff;
 }
 
 .top {
