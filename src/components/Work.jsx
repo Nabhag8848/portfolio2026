@@ -1,10 +1,12 @@
 import { projects } from "../data/Projects";
 import "../App.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function Work({ activeFilter, onFilterChange }) {
   const filters = ["all", "integrations", "extensions", "tools", "templates"];
   const navigate = useNavigate();
+  const location = useLocation();
+  const isProjectDetail = location.pathname.startsWith("/projects/");
 
   const filteredProjects =
     activeFilter === "all"
@@ -12,7 +14,9 @@ function Work({ activeFilter, onFilterChange }) {
       : projects.filter((project) => project.category === activeFilter);
 
   const handleProjectClick = (project) => {
-    if (project?.id) navigate(`/projects/${project.id}`);
+    if (project?.id) {
+      navigate(`/projects/${project.id}`, { replace: isProjectDetail });
+    }
   };
 
   const handleFilterClick = (filter) => {
