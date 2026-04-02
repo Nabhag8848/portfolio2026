@@ -27,12 +27,12 @@ function MiddleColumn() {
   return (
     <div>
       <p className="experience-desc">
-        I began my career by building four integrations for an Investing
-        Monitoring Tool. Since then, have spent time specializing in the work of
-        integrations, which I find demanding cause 90% of SaaS is just building
-        integrations. While my broader expertise is in web engineering, I excel
-        in building integrations, marketplace apps and could be the best choice
-        for your needs.
+        I began my career as a founding engineer at an integration startup, and
+        later as the first engineer at a healthcare company—helped the product
+        scale and grew the business past $1M ARR. Now my focus is shifted from
+        connecting tools to applied AI systems, context engineering, multi-agent
+        orchestration, and language user interfaces. I'm deeply interested in how
+        agents can automate complex workflows and reduce operational overhead.
       </p>
       <p className="experience-desc">
         For more details, check out my{" "}
