@@ -13,7 +13,7 @@ function LeftColumn() {
           }}
         >
           <h1>Nabhag Motivaras</h1>
-          <p style={{ margin: 0, color: "#999" }}>Full Stack Engineer</p>
+          <p style={{ margin: 0, color: "#999" }}>Applied AI Engineer</p>
           <span className="nav-links">
             <a
               target="_blank"
