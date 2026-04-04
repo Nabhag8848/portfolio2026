@@ -8,9 +8,7 @@ function MiddleColumn() {
   const location = useLocation();
 
   useEffect(() => {
-    const m = location.pathname.match(
-      /^\/c\/(integrations|extensions|tools|templates)$/
-    );
+    const m = location.pathname.match(/^\/c\/(integrations|extensions|tools)$/);
     if (m) {
       setActiveFilter(m[1]);
     } else if (location.pathname === "/") {
@@ -31,8 +29,9 @@ function MiddleColumn() {
         later as the first engineer at a healthcare company—helped the product
         scale and grew the business past $1M ARR. Now my focus is shifted from
         connecting tools to applied AI systems, context engineering, multi-agent
-        orchestration, and language user interfaces. I'm deeply interested in how
-        agents can automate complex workflows and reduce operational overhead.
+        orchestration, and language user interfaces. I'm deeply interested in
+        how agents can automate complex workflows and reduce operational
+        overhead.
       </p>
       <p className="experience-desc">
         For more details, check out my{" "}
@@ -47,10 +46,7 @@ function MiddleColumn() {
 
         <div className="experience-item">
           <div className="experience-header">
-            <Link
-              className="experience-company"
-              to="/blog/sabbatical"
-            >
+            <Link className="experience-company" to="/blog/sabbatical">
               Health & Wellbeing
             </Link>
             <span className="experience-date">Jun 2025 – Nov 2025</span>
@@ -58,10 +54,7 @@ function MiddleColumn() {
           <p className="experience-desc">
             Prioritized recovery from severe Vitamin D3 and B12 deficiencies.
             Documented the full journey in a detailed blog —{" "}
-            <Link
-              className="green-link"
-              to="/blog/sabbatical"
-            >
+            <Link className="green-link" to="/blog/sabbatical">
               read it here
             </Link>
             .
@@ -115,9 +108,9 @@ function MiddleColumn() {
           </div>
           <p className="experience-desc">
             Played a key role in building the new client-side, managing
-            production, and leading a full app migration. Contributed to internal
-            CRM SDKs and customized isomorphic JavaScript client SDKs for
-            customer needs. Set up the foundation for a{" "}
+            production, and leading a full app migration. Contributed to
+            internal CRM SDKs and customized isomorphic JavaScript client SDKs
+            for customer needs. Set up the foundation for a{" "}
             <span className="green-highlight">webhook system</span> and
             maintained the codebase during critical periods. Conducted
             integration code reviews to ensure product stability.

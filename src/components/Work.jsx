@@ -3,7 +3,7 @@ import "../App.css";
 import { useNavigate, useLocation } from "react-router-dom";
 
 function Work({ activeFilter, onFilterChange }) {
-  const filters = ["all", "integrations", "extensions", "tools", "templates"];
+  const filters = ["all", "integrations", "extensions", "tools"];
   const navigate = useNavigate();
   const location = useLocation();
   const isProjectDetail = location.pathname.startsWith("/projects/");
