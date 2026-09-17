@@ -59,6 +59,9 @@ function MermaidDiagram({ children }) {
             activationBkgColor: "#254a33", activationBorderColor: "#4ade80",
           },
         });
+        // Validate first so Mermaid 12 never injects its parser error into the
+        // document. Invalid diagrams stay as the source preview below.
+        await mermaid.parse(source);
         const result = await mermaid.render(id, source);
         if (!cancelled) {
           const viewBox = result.svg.match(/viewBox="([^"]+)"/)?.[1];
@@ -66,7 +69,10 @@ function MermaidDiagram({ children }) {
           if (naturalWidth) setWidth(naturalWidth);
           setSvg(result.svg);
         }
-      }).catch(() => {});
+      }).catch(() => {
+        // A documentation diagram is optional; ignore Mermaid syntax errors.
+        // The source remains visible in the fallback <pre> below.
+      });
     }, { rootMargin: "300px" });
     observer.observe(container.current);
     return () => { cancelled = true; observer.disconnect(); };
