@@ -189,7 +189,7 @@ export const projects = [
       "Raycast Extension for seamless twentyCRM management, enabling users to instantly create records across both standard and custom objects.",
     tech: ["TypeScript", "Raycast API", "Twenty CRM API"],
     link: "https://www.raycast.com/NabhagMotivaras/twenty",
-    gh: null,
+    gh: "https://github.com/raycast/extensions/tree/main/extensions/twenty",
   },
   {
     id: "ai-integration",

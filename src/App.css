@@ -3,6 +3,7 @@
   --doc-border: #2c4033;
   padding: 30px;
   min-width: 0;
+  container-type: inline-size;
   overflow-wrap: anywhere;
   line-height: 1.85;
   color: #b8c5bc;
@@ -64,20 +65,57 @@
 .documentation-code :is(.hljs-punctuation, .hljs-operator) { color: #829d8b; }
 .documentation-code .hljs-comment { color: #829989; font-style: italic; }
 .documentation-code :is(.hljs-type, .hljs-built_in) { color: #a6c8f2; }
-.documentation-table { overflow-x: auto; margin: 24px 0; border: 1px solid var(--doc-border); border-radius: 5px; }
-.documentation-table table { border-collapse: collapse; width: 100%; min-width: 480px; }
-.documentation-table :is(th, td) { border-bottom: 1px solid #28372e; padding: 12px 14px; text-align: left; vertical-align: top; }
+.documentation-table { width: 100%; min-width: 0; margin: 24px 0; border: 1px solid var(--doc-border); border-radius: 5px; box-sizing: border-box; }
+.documentation-table table { border-collapse: collapse; table-layout: fixed; width: 100%; min-width: 0; font-size: 11px; line-height: 1.6; }
+.documentation-table :is(th, td) { border-bottom: 1px solid #28372e; padding: 10px 8px; text-align: left; vertical-align: top; overflow-wrap: anywhere; white-space: normal; }
+.documentation-table :is(code, pre) { font-size: inherit; white-space: pre-wrap; overflow-wrap: anywhere; }
+.documentation-table :is(ul, ol) { padding-left: 14px; }
+.documentation-table img { max-width: 100%; height: auto; }
 .documentation-table th { background: #18251d; color: #baf0ca; font-weight: 650; }
 .documentation-table tbody tr:nth-child(even) { background: #141b16; }
 .documentation-table tbody tr:hover { background: #19261e; }
 .documentation-table tr:last-child td { border-bottom: 0; }
 .documentation-diagram { min-height: 120px; }
-.documentation-diagram-viewport { overflow: auto; max-height: 640px; padding: 20px; background: #111713; }
-.documentation-diagram-viewport pre { margin: 0; white-space: pre; color: #a9d4b8; font-size: 11px; }
-.documentation-diagram-svg { max-width: none; }
-.documentation-diagram-svg svg { display: block; width: 100%; max-width: none !important; height: auto; }
+.documentation-diagram-viewport { min-width: 0; padding: 12px; background: #111713; }
+.documentation-diagram-viewport pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; color: #a9d4b8; font-size: 10px; }
+.documentation-diagram-svg { width: 100%; min-width: 0; }
+.documentation-diagram-svg svg {
+  display: block;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: min(600px, 68svh) !important;
+  margin-inline: auto;
+}
+.project-documentation img {
+  max-height: min(600px, 68svh);
+  object-fit: contain;
+}
+.documentation-video { display: block; margin-block: 16px; min-width: 0; }
+.documentation-video video {
+  display: block;
+  width: 100%;
+  max-height: min(600px, 68svh);
+  object-fit: contain;
+  border-radius: 5px;
+  background: #101611;
+}
+.documentation-video > a { display: inline-block; margin-top: 6px; font-size: 10px; }
+.documentation-schema .documentation-diagram-viewport {
+  overflow: auto;
+  max-height: min(650px, 72svh);
+}
+.documentation-schema-zoomed .documentation-diagram-svg svg {
+  width: 100% !important;
+  max-height: none !important;
+}
+@container (max-width: 500px) {
+  .documentation-table table { font-size: 10px; }
+  .documentation-table :is(th, td) { padding: 8px 5px; }
+  .documentation-diagram-viewport { padding: 6px; }
+}
 @media (max-width: 700px) {
-  .project-documentation { padding: 24px 20px; }
+  .project-documentation { padding: 20px 12px; }
   .documentation-panel-header { padding: 10px 12px; }
   .documentation-code { padding: 14px; }
 }
@@ -309,6 +347,7 @@ h4 {
 
 .column {
   box-sizing: border-box;
+  min-width: 0;
 }
 
 .nabhag-intro {
@@ -345,6 +384,7 @@ h4 {
 
 .left-stack {
   width: 55%;
+  min-width: 0;
   display: flex;
   flex-direction: row;
 }

@@ -93,8 +93,8 @@ function GenericProject({ project, onBack }) {
       </div>
 
       <div className="divider" />
-      {(project.id === "orchex" || project.id === "lyo") && (
-        <Suspense fallback={<p style={{ padding: "30px" }}>Loading design documentation…</p>}>
+      {project.gh && (
+        <Suspense fallback={<p style={{ padding: "30px" }}>Loading documentation…</p>}>
           <ProjectDocumentation key={project.id} project={project} />
         </Suspense>
       )}

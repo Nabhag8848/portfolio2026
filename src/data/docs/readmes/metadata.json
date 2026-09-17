@@ -1,0 +1,77 @@
+{
+  "twenty-raycast": {
+    "sourceUrl": "https://github.com/raycast/extensions/blob/main/extensions/twenty/README.md",
+    "base": "https://github.com/raycast/extensions/blob/main/extensions/twenty/",
+    "rawBase": "https://raw.githubusercontent.com/raycast/extensions/main/extensions/twenty/"
+  },
+  "ask-postgres": {
+    "sourceUrl": "https://github.com/Nabhag8848/ask-postgres/blob/main/README.md",
+    "base": "https://github.com/Nabhag8848/ask-postgres/blob/main/",
+    "rawBase": "https://raw.githubusercontent.com/Nabhag8848/ask-postgres/main/"
+  },
+  "go-concurrency": {
+    "sourceUrl": "https://github.com/Nabhag8848/go-concurrency/blob/main/README.md",
+    "base": "https://github.com/Nabhag8848/go-concurrency/blob/main/",
+    "rawBase": "https://raw.githubusercontent.com/Nabhag8848/go-concurrency/main/"
+  },
+  "customer-support-agent": {
+    "sourceUrl": "https://github.com/Nabhag8848/customer-support-agent/blob/main/README.md",
+    "base": "https://github.com/Nabhag8848/customer-support-agent/blob/main/",
+    "rawBase": "https://raw.githubusercontent.com/Nabhag8848/customer-support-agent/main/"
+  },
+  "personal-assistant": {
+    "sourceUrl": "https://github.com/Nabhag8848/langchain-personal-assistant/blob/main/README.md",
+    "base": "https://github.com/Nabhag8848/langchain-personal-assistant/blob/main/",
+    "rawBase": "https://raw.githubusercontent.com/Nabhag8848/langchain-personal-assistant/main/"
+  },
+  "progressive-skill-disclosure": {
+    "sourceUrl": "https://github.com/Nabhag8848/agents-skill-pattern/blob/main/README.md",
+    "base": "https://github.com/Nabhag8848/agents-skill-pattern/blob/main/",
+    "rawBase": "https://raw.githubusercontent.com/Nabhag8848/agents-skill-pattern/main/"
+  },
+  "knowledge-router": {
+    "sourceUrl": "https://github.com/Nabhag8848/agents-router-pattern/blob/main/README.md",
+    "base": "https://github.com/Nabhag8848/agents-router-pattern/blob/main/",
+    "rawBase": "https://raw.githubusercontent.com/Nabhag8848/agents-router-pattern/main/"
+  },
+  "log-analyzer": {
+    "sourceUrl": "https://github.com/Nabhag8848/log-analyzer/blob/main/README.md",
+    "base": "https://github.com/Nabhag8848/log-analyzer/blob/main/",
+    "rawBase": "https://raw.githubusercontent.com/Nabhag8848/log-analyzer/main/"
+  },
+  "notion-integration": {
+    "sourceUrl": "https://github.com/Nabhag8848/google-summer-of-code/blob/main/README.md",
+    "base": "https://github.com/Nabhag8848/google-summer-of-code/blob/main/",
+    "rawBase": "https://raw.githubusercontent.com/Nabhag8848/google-summer-of-code/main/"
+  },
+  "ai-integration": {
+    "sourceUrl": "https://github.com/Nabhag8848/yoursTruly.Backend/blob/master/README.md",
+    "base": "https://github.com/Nabhag8848/yoursTruly.Backend/blob/master/",
+    "rawBase": "https://raw.githubusercontent.com/Nabhag8848/yoursTruly.Backend/master/"
+  },
+  "financial-integration": {
+    "sourceUrl": "https://github.com/Nabhag8848/quickbooks-integration/blob/main/README.md",
+    "base": "https://github.com/Nabhag8848/quickbooks-integration/blob/main/",
+    "rawBase": "https://raw.githubusercontent.com/Nabhag8848/quickbooks-integration/main/"
+  },
+  "nearby-clinics": {
+    "sourceUrl": "https://github.com/Nabhag8848/nearby-clinics/blob/main/README.md",
+    "base": "https://github.com/Nabhag8848/nearby-clinics/blob/main/",
+    "rawBase": "https://raw.githubusercontent.com/Nabhag8848/nearby-clinics/main/"
+  },
+  "covercraft": {
+    "sourceUrl": "https://github.com/Nabhag8848/covercraft/blob/main/README.md",
+    "base": "https://github.com/Nabhag8848/covercraft/blob/main/",
+    "rawBase": "https://raw.githubusercontent.com/Nabhag8848/covercraft/main/"
+  },
+  "openstatus-raycast": {
+    "sourceUrl": "https://github.com/Nabhag8848/openstatus-raycast-extension/blob/main/README.md",
+    "base": "https://github.com/Nabhag8848/openstatus-raycast-extension/blob/main/",
+    "rawBase": "https://raw.githubusercontent.com/Nabhag8848/openstatus-raycast-extension/main/"
+  },
+  "carrier-integration": {
+    "sourceUrl": "https://github.com/Nabhag8848/ups-integration-service/blob/main/README.md",
+    "base": "https://github.com/Nabhag8848/ups-integration-service/blob/main/",
+    "rawBase": "https://raw.githubusercontent.com/Nabhag8848/ups-integration-service/main/"
+  }
+}
