@@ -37,7 +37,10 @@ function MermaidDiagram({ children }) {
         if (cancelled) return;
         const { default: mermaid } = await import("mermaid");
         mermaid.initialize({
-          startOnLoad: false, theme: "base", securityLevel: "strict",
+          startOnLoad: false,
+          suppressErrorRendering: true,
+          theme: "base",
+          securityLevel: "strict",
           fontFamily: '"Geist Mono", monospace',
           themeVariables: {
             darkMode: true,
