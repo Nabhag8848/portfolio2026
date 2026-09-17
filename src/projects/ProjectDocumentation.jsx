@@ -61,7 +61,8 @@ function MermaidDiagram({ children }) {
         });
         // Validate first so Mermaid 12 never injects its parser error into the
         // document. Invalid diagrams stay as the source preview below.
-        await mermaid.parse(source);
+        const isValid = await mermaid.parse(source, { suppressErrors: true });
+        if (!isValid || cancelled) return;
         const result = await mermaid.render(id, source);
         if (!cancelled) {
           const viewBox = result.svg.match(/viewBox="([^"]+)"/)?.[1];
