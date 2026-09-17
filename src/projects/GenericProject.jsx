@@ -1,4 +1,7 @@
 import HeaderTop from "../components/headers/HeaderTop";
+import { lazy, Suspense } from "react";
+
+const ProjectDocumentation = lazy(() => import("./ProjectDocumentation"));
 
 function GenericProject({ project, onBack }) {
   return (
@@ -90,6 +93,11 @@ function GenericProject({ project, onBack }) {
       </div>
 
       <div className="divider" />
+      {(project.id === "orchex" || project.id === "lyo") && (
+        <Suspense fallback={<p style={{ padding: "30px" }}>Loading design documentation…</p>}>
+          <ProjectDocumentation key={project.id} project={project} />
+        </Suspense>
+      )}
     </div>
   );
 }

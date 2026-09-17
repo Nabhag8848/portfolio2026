@@ -2,6 +2,23 @@ import GenericProject from "../projects/GenericProject";
 
 export const projects = [
   {
+    id: "orchex",
+    title: "Orchex",
+    desc: "durable workflow execution",
+    date: "",
+    type: "image",
+    src: "/assets/orchex/execution-architecture.png",
+    category: "tools",
+    status: "active",
+    clickable: true,
+    component: GenericProject,
+    about:
+      "A durable workflow orchestration and execution engine for versioned DAGs. Build a graph, publish an immutable version, and run it with reliable retry and resume semantics. Separate builder and execution APIs use PostgreSQL to persist run state and a transactional outbox to dispatch node jobs through SQS. Workers execute API calls, conditional branches, and JavaScript functions in a Lambda sandbox, with infrastructure managed through Terraform on AWS ECS Fargate.",
+    tech: ["Go", "PostgreSQL", "AWS SQS", "AWS Lambda", "AWS ECS Fargate", "Terraform", "Docker"],
+    link: null,
+    gh: "https://github.com/Nabhag8848/orchex",
+  },
+  {
     id: "lyo",
     title: "LYO",
     desc: "virtual fitting room",
@@ -35,6 +52,23 @@ export const projects = [
     tech: ["Go", "PostgreSQL", "pgx", "langchaingo", "Bubble Tea"],
     link: null,
     gh: "https://github.com/Nabhag8848/ask-postgres",
+  },
+  {
+    id: "go-concurrency",
+    title: "Go Concurrency",
+    desc: "interactive concurrency guide",
+    date: "",
+    type: "image",
+    src: "/assets/go-concurrency/concurrency.gif",
+    category: "tools",
+    status: "active",
+    clickable: true,
+    component: GenericProject,
+    about:
+      "An interactive guide to learning Go concurrency from first principles. Visualizations explain how concurrent work moves through a machine, then connect that mental model to Go through course lessons, source notes, and runnable in-browser examples.",
+    tech: ["Go", "TypeScript", "React", "Vite", "Vercel"],
+    link: "https://concurrency.nabhag.dev/",
+    gh: "https://github.com/Nabhag8848/go-concurrency",
   },
   {
     id: "customer-support-agent",
