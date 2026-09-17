@@ -137,14 +137,17 @@ function MermaidDiagram({ children }) {
         if (!cancelled) {
           // Preserve intrinsic dimensions: a narrow vertical flowchart should
           // not be enlarged to the full width of the documentation column.
-          const document = new DOMParser().parseFromString(result.svg, "image/svg+xml");
-          const renderedSvg = document.documentElement;
+          // Mermaid's HTML labels can contain <br> elements, which are valid
+          // HTML but not well-formed XML. Use the same parser as the page.
+          const document = new DOMParser().parseFromString(result.svg, "text/html");
+          const renderedSvg = document.querySelector("svg");
+          if (!renderedSvg) return;
           const viewBox = renderedSvg.getAttribute("viewBox")?.trim().split(/[\s,]+/).map(Number);
           if (viewBox?.length === 4 && viewBox[2] > 0 && viewBox[3] > 0) {
             renderedSvg.setAttribute("width", String(viewBox[2]));
             renderedSvg.setAttribute("height", String(viewBox[3]));
           }
-          setSvg(new XMLSerializer().serializeToString(renderedSvg));
+          setSvg(renderedSvg.outerHTML);
         }
       }).catch(() => {
         // A documentation diagram is optional; ignore Mermaid syntax errors.

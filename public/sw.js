@@ -1,4 +1,4 @@
-const CACHE_NAME = "portfolio-runtime-v2";
+const CACHE_NAME = "portfolio-runtime-v3";
 const APP_SHELL = ["/", "/index.html"];
 const MEDIA_MATCH = /\/assets\/.+\.(gif|webp|png|jpe?g|mp4|webm|mov)(\?.*)?$/i;
 
@@ -27,6 +27,9 @@ self.addEventListener("fetch", (event) => {
   if (request.method !== "GET") return;
 
   const url = new URL(request.url);
+  const isAppShell = url.origin === self.location.origin && (
+    url.pathname === "/" || url.pathname === "/index.html"
+  );
   const isAppAsset = url.origin === self.location.origin && (
     MEDIA_MATCH.test(url.pathname) ||
     url.pathname.startsWith("/assets/") ||
@@ -41,7 +44,9 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.open(CACHE_NAME).then(async (cache) => {
       const cached = await cache.match(request);
-      if (cached && isAppAsset) return cached;
+      // Check for new HTML so a cached shell cannot pin an old JS bundle.
+      // Hashed assets and media can continue using the cache first.
+      if (cached && isAppAsset && !isAppShell) return cached;
 
       try {
         const response = await fetch(request);
