@@ -27,11 +27,11 @@ function MiddleColumn() {
       <p className="experience-desc">
         I began my career as a founding engineer at an integration startup, and
         later as the first engineer at a healthcare company—helped the product
-        scale and grew the business past $1M ARR. Now my focus is shifted from
-        connecting tools to applied AI systems, context engineering, multi-agent
-        orchestration, and language user interfaces. I'm deeply interested in
-        how agents can automate complex workflows and reduce operational
-        overhead.
+        scale and grew the business past $1M ARR. Now my focus is on applied AI
+        infrastructure, distributed systems, durable workflows, and agent
+        orchestration at scale. I'm deeply interested in building reliable
+        systems that help agents automate complex workflows and reduce
+        operational overhead.
       </p>
       <p className="experience-desc">
         For more details, check out my{" "}
