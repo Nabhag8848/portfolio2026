@@ -1,9 +1,10 @@
-const CACHE_NAME = "portfolio-media-v1";
+const CACHE_NAME = "portfolio-runtime-v2";
+const APP_SHELL = ["/", "/index.html"];
 const MEDIA_MATCH = /\/assets\/.+\.(gif|webp|png|jpe?g|mp4|webm|mov)(\?.*)?$/i;
 
 self.addEventListener("install", (event) => {
   self.skipWaiting();
-  event.waitUntil(caches.open(CACHE_NAME));
+  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)));
 });
 
 self.addEventListener("activate", (event) => {
@@ -26,20 +27,30 @@ self.addEventListener("fetch", (event) => {
   if (request.method !== "GET") return;
 
   const url = new URL(request.url);
-  if (url.origin !== self.location.origin || !MEDIA_MATCH.test(url.pathname)) {
+  const isAppAsset = url.origin === self.location.origin && (
+    MEDIA_MATCH.test(url.pathname) ||
+    url.pathname.startsWith("/assets/") ||
+    url.pathname === "/" ||
+    url.pathname === "/index.html"
+  );
+  const isGitHubApi = url.origin === "https://api.github.com" && url.pathname.startsWith("/search/issues");
+  if (!isAppAsset && !isGitHubApi) {
     return;
   }
 
   event.respondWith(
     caches.open(CACHE_NAME).then(async (cache) => {
       const cached = await cache.match(request);
-      if (cached) return cached;
+      if (cached && isAppAsset) return cached;
 
-      const response = await fetch(request);
-      if (response.ok) {
-        cache.put(request, response.clone());
+      try {
+        const response = await fetch(request);
+        if (response.ok) cache.put(request, response.clone());
+        return response;
+      } catch (error) {
+        if (cached) return cached;
+        throw error;
       }
-      return response;
     }),
   );
 });
