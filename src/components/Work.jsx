@@ -50,11 +50,9 @@ function Work({ activeFilter, onFilterChange }) {
             <div>{project.title}</div>
             <div>{project.desc}</div>
             <div className="project-time">
-              <span
-                className={`status-badge status-${project.status || "active"}`}
-              >
-                {project.status || "active"}
-              </span>
+              <time className="year-badge" dateTime={project.date}>
+                {project.date}
+              </time>
             </div>
           </div>
         ))}

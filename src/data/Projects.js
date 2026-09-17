@@ -1,4 +1,5 @@
 import GenericProject from "../projects/GenericProject";
+import repositoryCreatedAt from "./RepositoryCreatedAt.json";
 
 export const projects = [
   {
@@ -177,7 +178,7 @@ export const projects = [
     id: "twenty-raycast",
     title: "Twenty CRM Extension",
     desc: "Raycast extension",
-    date: "",
+    date: "2024",
     type: "image",
     type: "video",
     src: "/assets/twenty/raycast.mp4",
@@ -298,4 +299,7 @@ export const projects = [
     link: null,
     gh: "https://github.com/Nabhag8848/ups-integration-service",
   },
-];
+].map((project) => ({
+  ...project,
+  date: project.date || repositoryCreatedAt[project.id]?.slice(0, 4) || "",
+})).sort((a, b) => Number(b.date) - Number(a.date));
