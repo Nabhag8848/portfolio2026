@@ -48,7 +48,7 @@ function MiddleColumn() {
             <span className="experience-date">Dec 2025 – present</span>
           </div>
           <ul className="experience-desc experience-bullets">
-            <li>Delivered NDA contracts, including a video-downloader extension, while focusing on workflow and sandbox infrastructure.</li>
+            <li>Delivered NDA contracts, including a video-downloader extension, while focusing on <span className="green-highlight">workflow and sandbox infra</span>.</li>
           </ul>
         </div>
 
@@ -85,7 +85,7 @@ function MiddleColumn() {
               Designed the core data platform and built auth, onboarding, scheduling, payments, and RBAC systems.{" "}
               <a className="green-link" href="https://dbdiagram.io/d/Prisma-Generated-66f4e6c53430cb846ca92ea6" target="_blank" rel="noopener noreferrer">Database schema</a>.
             </li>
-            <li>Built a queue-backed webhook ingestion pipeline routing auth, form, scheduling, and payment events to services.</li>
+            <li>Built a queue-backed <span className="green-highlight">webhook ingestion pipeline</span> routing auth, form, scheduling, and payment events to services.</li>
             <li>Migrated legacy data without loss; automated 15-minute unpaid-call cancellation and prescription templates.</li>
           </ul>
         </div>
@@ -103,10 +103,10 @@ function MiddleColumn() {
             <span className="experience-date">May 2024 - Aug 2024</span>
           </div>
           <ul className="experience-desc experience-bullets">
-            <li>Built Svix-backed webhooks to deliver integration events and keep customer systems in sync.</li>
-            <li>Implemented two-way sync across third-party integrations with normalized resources and field mappings.</li>
-            <li>Built OAuth flows with authorization, token refresh, and failure handling across integrations.</li>
-            <li>Adapted an isomorphic JavaScript SDK for React, Vue, Angular, and customer workflows.</li>
+            <li>Built <span className="green-highlight">Svix-backed webhooks</span> to deliver integration events and keep customer systems in sync.</li>
+            <li>Implemented <span className="green-highlight">two-way sync</span> across third-party integrations with normalized resources and field mappings.</li>
+            <li>Built <span className="green-highlight">OAuth flows</span> with authorization, token refresh, and failure handling across integrations.</li>
+            <li>Adapted an <span className="green-highlight">isomorphic JavaScript SDK</span> for React, Vue, Angular, and customer workflows.</li>
           </ul>
         </div>
 
@@ -123,7 +123,11 @@ function MiddleColumn() {
             <span className="experience-date">Sep 2023 - May 2024</span>
           </div>
           <ul className="experience-desc experience-bullets">
-            <li>Mentored the GSoC 2024 AI GIF Generator and led Rocket.Chat Apps framework workshops.</li>
+            <li>
+              Mentored the GSoC 2024{" "}
+              <a className="green-link" href="https://summerofcode.withgoogle.com/archive/2024/projects/41d12z0y" target="_blank" rel="noopener noreferrer">AI GIF Generator</a>
+              {" "}and led <span className="green-highlight">Rocket.Chat Apps</span> framework workshops.
+            </li>
           </ul>
         </div>
 
@@ -141,7 +145,7 @@ function MiddleColumn() {
           </div>
           <ul className="experience-desc experience-bullets">
             <li>
-              Built a Notion integration for product managers to manage pages, tasks, and comments in Rocket.Chat, helping the company close more sales deals.{" "}
+              Built a <span className="green-highlight">Notion integration</span> for product managers to manage pages, tasks, and comments in Rocket.Chat, helping the company close more sales deals.{" "}
               <a className="green-link" href="https://www.youtube.com/watch?v=G1fZBqy5jp8" target="_blank" rel="noopener noreferrer">Demo</a>
               {" · "}
               <a className="green-link" href="https://www.figma.com/file/1Tk99mGHBmbQpOiT3vP17i/NotionApp" target="_blank" rel="noopener noreferrer">Design</a>
@@ -163,8 +167,8 @@ function MiddleColumn() {
             <span className="experience-date">May 2022 - Jun 2022</span>
           </div>
           <ul className="experience-desc experience-bullets">
-            <li>Built a market data pipeline delivering crypto-derivative spreads from <span className="green-highlight">4 exchanges in under 100ms</span>.</li>
-            <li>Merged concurrent bid/ask streams with RxJS, pushing updates to clients via SSE.</li>
+            <li>Built a market data pipeline delivering crypto-derivative spreads from 4 exchanges in under <span className="green-highlight">100ms</span>.</li>
+            <li>Merged concurrent bid/ask streams with <span className="green-highlight">RxJS</span>, pushing updates to clients via <span className="green-highlight">SSE</span>.</li>
           </ul>
         </div>
       </div>
