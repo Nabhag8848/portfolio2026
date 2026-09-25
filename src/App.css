@@ -339,8 +339,18 @@ h4 {
 
 .experience-bullets {
   margin: 0;
-  padding-left: 18px;
+  padding-left: 20px;
   text-align: left;
+  list-style: disc;
+}
+
+.experience-bullets li {
+  padding-left: 4px;
+}
+
+.experience-bullets li::marker {
+  color: #4ade80;
+  font-size: 0.9em;
 }
 
 .experience-bullets li + li {
