@@ -337,6 +337,16 @@ h4 {
   text-align: justify;
 }
 
+.experience-bullets {
+  margin: 0;
+  padding-left: 18px;
+  text-align: left;
+}
+
+.experience-bullets li + li {
+  margin-top: 6px;
+}
+
 /* LAYOUT */
 
 .container {

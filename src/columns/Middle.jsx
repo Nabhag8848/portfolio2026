@@ -47,10 +47,9 @@ function MiddleColumn() {
             <span className="experience-company">Applied AI Consultant</span>
             <span className="experience-date">Dec 2025 – present</span>
           </div>
-          <p className="experience-desc">
-            Helping companies automate complex workflows by orchestrating
-            agents.
-          </p>
+          <ul className="experience-desc experience-bullets">
+            <li>Delivered NDA contracts, including a video-downloader extension, while focusing on workflow and sandbox infrastructure.</li>
+          </ul>
         </div>
 
         <div className="experience-item">
@@ -60,14 +59,12 @@ function MiddleColumn() {
             </Link>
             <span className="experience-date">Jun 2025 – Nov 2025</span>
           </div>
-          <p className="experience-desc">
-            Prioritized recovery from severe Vitamin D3 and B12 deficiencies.
-            Documented the full journey in a detailed blog —{" "}
-            <Link className="green-link" to="/blog/sabbatical">
-              read it here
-            </Link>
-            .
-          </p>
+          <ul className="experience-desc experience-bullets">
+            <li>
+              Recovered from severe Vitamin D3/B12 deficiencies that impaired cognition and communication.{" "}
+              <Link className="green-link" to="/blog/sabbatical">Read the journey</Link>.
+            </li>
+          </ul>
         </div>
 
         <div className="experience-item">
@@ -82,25 +79,15 @@ function MiddleColumn() {
             </a>
             <span className="experience-date">Sep 2024 - May 2025</span>
           </div>
-          <p className="experience-desc">
-            Sole engineer behind building entire system powering{" "}
-            <span className="green-highlight">160K+ therapy sessions</span> and{" "}
-            <span className="green-highlight">50K+ users</span> generates{" "}
-            <span className="green-highlight">$1M+ arr</span>. Built
-            event-driven system integrating Typeform, Calendly, and Razorpay;
-            migrated messy legacy data via custom scripts; developed operation{" "}
-            <span className="green-highlight">RBAC</span> web app; and automated
-            key workflows for seamless operations.{" "}
-            <a
-              className="green-link"
-              href="https://dbdiagram.io/d/Prisma-Generated-66f4e6c53430cb846ca92ea6"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              db-schema-design
-            </a>{" "}
-            (for reference).
-          </p>
+          <ul className="experience-desc experience-bullets">
+            <li>First engineer for a platform serving <span className="green-highlight">75K+ users</span>, <span className="green-highlight">250K+ teleconsults</span>, and <span className="green-highlight">$1M+ ARR</span>.</li>
+            <li>
+              Designed the core data platform and built auth, onboarding, scheduling, payments, and RBAC systems.{" "}
+              <a className="green-link" href="https://dbdiagram.io/d/Prisma-Generated-66f4e6c53430cb846ca92ea6" target="_blank" rel="noopener noreferrer">Database schema</a>.
+            </li>
+            <li>Built a queue-backed webhook ingestion pipeline routing auth, form, scheduling, and payment events to services.</li>
+            <li>Migrated legacy data without loss; automated 15-minute unpaid-call cancellation and prescription templates.</li>
+          </ul>
         </div>
 
         <div className="experience-item">
@@ -115,15 +102,12 @@ function MiddleColumn() {
             </a>
             <span className="experience-date">May 2024 - Aug 2024</span>
           </div>
-          <p className="experience-desc">
-            Played a key role in building the new client-side, managing
-            production, and leading a full app migration. Contributed to
-            internal CRM SDKs and customized isomorphic JavaScript client SDKs
-            for customer needs. Set up the foundation for a{" "}
-            <span className="green-highlight">webhook system</span> and
-            maintained the codebase during critical periods. Conducted
-            integration code reviews to ensure product stability.
-          </p>
+          <ul className="experience-desc experience-bullets">
+            <li>Built Svix-backed webhooks to deliver integration events and keep customer systems in sync.</li>
+            <li>Implemented two-way sync across third-party integrations with normalized resources and field mappings.</li>
+            <li>Built OAuth flows with authorization, token refresh, and failure handling across integrations.</li>
+            <li>Adapted an isomorphic JavaScript SDK for React, Vue, Angular, and customer workflows.</li>
+          </ul>
         </div>
 
         <div className="experience-item">
@@ -136,16 +120,11 @@ function MiddleColumn() {
             >
               Rocket.Chat (contributor)
             </a>
-            <span className="experience-date">Sep 2022 - May 2024</span>
+            <span className="experience-date">Sep 2023 - May 2024</span>
           </div>
-          <p className="experience-desc">
-            Contributed to GitHub integration and resolved critical bugs in
-            Rocket.Chat. Authored a backward-compatible OAuth2 authorization
-            approach for RocketChat.Apps,{" "}
-            <span className="green-highlight">Maintainer</span> of the Notion
-            Integration, and actively supported new contributors through weekly
-            Apps Engine workshops.
-          </p>
+          <ul className="experience-desc experience-bullets">
+            <li>Mentored the GSoC 2024 AI GIF Generator and led Rocket.Chat Apps framework workshops.</li>
+          </ul>
         </div>
 
         <div className="experience-item">
@@ -160,14 +139,15 @@ function MiddleColumn() {
             </a>
             <span className="experience-date">May 2023 - Aug 2023</span>
           </div>
-          <p className="experience-desc">
-            Built Notion App for Rocket.Chat, enabling seamless collaboration by
-            allowing users to create, share, and interact with Notion pages and
-            databases directly within Rocket.Chat. Implemented OAuth2
-            authorization, multi-workspace support, message preservation, and
-            in-chat Notion tables viewing — all with a user-centric and
-            backward-compatible approach.
-          </p>
+          <ul className="experience-desc experience-bullets">
+            <li>
+              Built a Notion integration for product managers to manage pages, tasks, and comments in Rocket.Chat, helping the company close more sales deals.{" "}
+              <a className="green-link" href="https://www.youtube.com/watch?v=G1fZBqy5jp8" target="_blank" rel="noopener noreferrer">Demo</a>
+              {" · "}
+              <a className="green-link" href="https://www.figma.com/file/1Tk99mGHBmbQpOiT3vP17i/NotionApp" target="_blank" rel="noopener noreferrer">Design</a>
+            </li>
+            <li>Built backward-compatible Notion OAuth2 flows for connecting and switching between multiple Notion workspaces on a platform serving <span className="green-highlight">12 million users</span>.</li>
+          </ul>
         </div>
 
         <div className="experience-item">
@@ -182,13 +162,10 @@ function MiddleColumn() {
             </a>
             <span className="experience-date">May 2022 - Jun 2022</span>
           </div>
-          <p className="experience-desc">
-            Developed a real-time crypto analytics dashboard using WebSockets,
-            and NestJS (with Observer pattern). Integrated data feeds from{" "}
-            <span className="green-highlight">four major exchanges</span> (FTX,
-            OKX, Binance, Huobi Global) and implemented scheduled data storage
-            using cron jobs.
-          </p>
+          <ul className="experience-desc experience-bullets">
+            <li>Built a market data pipeline delivering crypto-derivative spreads from <span className="green-highlight">4 exchanges in under 100ms</span>.</li>
+            <li>Merged concurrent bid/ask streams with RxJS, pushing updates to clients via SSE.</li>
+          </ul>
         </div>
       </div>
 
