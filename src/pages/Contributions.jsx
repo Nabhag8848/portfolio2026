@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import {
   formatDate,
@@ -15,8 +16,8 @@ function PRItem({ pr }) {
     status === "merged"
       ? "contrib-status-merged"
       : status === "closed"
-      ? "contrib-status-closed"
-      : "contrib-status-open";
+        ? "contrib-status-closed"
+        : "contrib-status-open";
 
   return (
     <div className="contrib-pr-card">
@@ -38,8 +39,8 @@ function PRItem({ pr }) {
             {pr.pull_request.merged_at
               ? formatDate(pr.pull_request.merged_at)
               : pr.closed_at
-              ? formatDate(pr.closed_at)
-              : formatDate(pr.created_at)}
+                ? formatDate(pr.closed_at)
+                : formatDate(pr.created_at)}
           </span>
           <span className={`contrib-status ${statusClass}`}>{status}</span>
         </div>
@@ -58,14 +59,15 @@ function PRItem({ pr }) {
 }
 
 export default function Contributions() {
+  const sentinelRef = useRef(null);
   const { prs, loading, loadingMore, error, hasMore, loadMore } =
     useContributions();
 
   useInfiniteScroll({
+    targetRef: sentinelRef,
     hasMore,
-    isLoading: loadingMore,
+    isLoading: loading || loadingMore,
     onLoadMore: loadMore,
-    threshold: 1000,
   });
 
   if (loading) {
@@ -106,6 +108,8 @@ export default function Contributions() {
         {prs.map((pr) => (
           <PRItem key={pr.html_url} pr={pr} />
         ))}
+
+        <div ref={sentinelRef} aria-hidden="true" />
 
         {loadingMore && (
           <div className="contrib-loading-more">

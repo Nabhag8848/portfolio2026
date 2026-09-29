@@ -1,34 +1,39 @@
 import { useEffect } from "react";
 
+function getScrollRoot(node) {
+  let parent = node.parentElement;
+  while (parent && parent !== document.documentElement) {
+    const { overflowY } = getComputedStyle(parent);
+    if (
+      (overflowY === "auto" || overflowY === "scroll") &&
+      parent.scrollHeight > parent.clientHeight + 1
+    ) {
+      return parent;
+    }
+    parent = parent.parentElement;
+  }
+  return null;
+}
+
 export const useInfiniteScroll = ({
+  targetRef,
   hasMore,
   isLoading,
   onLoadMore,
-  threshold = 1000,
-  scrollElement = null,
+  rootMargin = "800px",
 }) => {
   useEffect(() => {
-    const el = scrollElement || window;
+    const target = targetRef?.current;
+    if (!target || !hasMore || isLoading) return;
 
-    const handleScroll = () => {
-      if (!hasMore || isLoading) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) onLoadMore();
+      },
+      { root: getScrollRoot(target), rootMargin },
+    );
 
-      if (scrollElement) {
-        const { scrollTop, scrollHeight, clientHeight } = scrollElement;
-        if (scrollTop + clientHeight >= scrollHeight - threshold) {
-          onLoadMore();
-        }
-      } else {
-        if (
-          window.innerHeight + document.documentElement.scrollTop >=
-          document.documentElement.offsetHeight - threshold
-        ) {
-          onLoadMore();
-        }
-      }
-    };
-
-    el.addEventListener("scroll", handleScroll);
-    return () => el.removeEventListener("scroll", handleScroll);
-  }, [hasMore, isLoading, onLoadMore, threshold, scrollElement]);
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, [targetRef, hasMore, isLoading, onLoadMore, rootMargin]);
 };

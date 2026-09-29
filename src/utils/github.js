@@ -39,13 +39,16 @@ export const isNotExcludedRepo = (pr) => {
   return !excludedRepos.some(
     (excluded) =>
       owner.toLowerCase() === excluded.owner.toLowerCase() &&
-      repoName.toLowerCase() === excluded.repo.toLowerCase()
+      repoName.toLowerCase() === excluded.repo.toLowerCase(),
   );
 };
 
 export const isValidContribution = (pr) => {
   return (
-    isExternalContribution(pr) && isAfterCutoffDate(pr) && isNotExcludedRepo(pr)
+    Boolean(pr.pull_request?.merged_at) &&
+    isExternalContribution(pr) &&
+    isAfterCutoffDate(pr) &&
+    isNotExcludedRepo(pr)
   );
 };
 
@@ -55,8 +58,8 @@ export const getStatus = (pr) => {
 };
 
 export const fetchGitHubPage = async (page, perPage = 100) => {
-  const url = `https://api.github.com/search/issues?q=author:nabhag8848+is:pr+-user:nabhag9949+is:public&per_page=${perPage}&page=${page}`;
-  const cacheKey = `github-contributions:${page}:${perPage}`;
+  const url = `https://api.github.com/search/issues?q=author:nabhag8848+is:pr+is:merged+-user:nabhag8848+-user:nabhag9949+is:public&per_page=${perPage}&page=${page}`;
+  const cacheKey = `github-contributions:v3:${page}:${perPage}`;
   const cacheTtl = 15 * 60 * 1000;
 
   try {
@@ -66,7 +69,9 @@ export const fetchGitHubPage = async (page, perPage = 100) => {
     // Storage is optional (private browsing and blocked storage are supported).
   }
 
-  const response = await fetch(url, { headers: { Accept: "application/vnd.github+json" } });
+  const response = await fetch(url, {
+    headers: { Accept: "application/vnd.github+json" },
+  });
 
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
@@ -84,7 +89,10 @@ export const fetchGitHubPage = async (page, perPage = 100) => {
   };
 
   try {
-    localStorage.setItem(cacheKey, JSON.stringify({ timestamp: Date.now(), data: result }));
+    localStorage.setItem(
+      cacheKey,
+      JSON.stringify({ timestamp: Date.now(), data: result }),
+    );
   } catch {
     // A full or unavailable cache must never block the page.
   }
@@ -93,9 +101,10 @@ export const fetchGitHubPage = async (page, perPage = 100) => {
 };
 
 export const shouldStopFetching = (currentPage, perPage, data) => {
-  const isLastPage = data.original_count < perPage;
-  const noMoreItems = data.items.length === 0;
-  const reachedGitHubLimit = (currentPage + 1) * perPage >= 1000;
+  const fetchedThrough = currentPage * perPage;
+  const lastGitHubPage = data.original_count < perPage;
+  const exhausted = fetchedThrough >= (data.total_count || 0);
+  const reachedGitHubLimit = fetchedThrough >= 1000;
 
-  return isLastPage || noMoreItems || reachedGitHubLimit;
+  return lastGitHubPage || exhausted || reachedGitHubLimit;
 };
