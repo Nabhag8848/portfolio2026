@@ -655,6 +655,12 @@ a {
   min-width: fit-content;
 }
 
+@media (max-width: 700px) {
+  .project-row {
+    grid-template-columns: minmax(0, 1fr) 10ch;
+  }
+}
+
 .project-row > div {
   min-width: 0;
 }

@@ -48,7 +48,7 @@ function Work({ activeFilter, onFilterChange }) {
             onClick={() => handleProjectClick(project)}
           >
             <div>{project.title}</div>
-            <div>{project.desc}</div>
+            <div className="project-desc hide-on-mobile">{project.desc}</div>
             <div className="project-time">
               <time className="year-badge" dateTime={project.date}>
                 {project.date}

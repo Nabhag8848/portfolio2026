@@ -1,6 +1,5 @@
 <h1 align="left"> 🔥 OpenStatus Raycast Integration </h1>
 
-
 <p>
  <span>
 OpenStatus is OpenSouce (more than 3x Github Trending)) Monitoring Tool for your Services. With this Raycast Integration, you'll be able to experience OpenStatus as if it's a native. Keep an eye on current status updates, effortlessly create detailed status reports, and update them with lightning speed. Get ready to streamline your workflow like never before and experience the power of OpenStatus in a whole new way with Raycast!
@@ -18,20 +17,29 @@ OpenStatus is OpenSouce (more than 3x Github Trending)) Monitoring Tool for your
 <a href="https://drive.google.com/file/d/1VKUGkmRrzgw4hOSyBXM_na_0Z6Q64iJU/view" title="Update Status Report Demo"><img src="https://github.com/Nabhag8848/openstatus-raycast-extension/assets/65061890/99069909-2233-4af9-999d-941625507911" alt="Demo2" /></a>
 
 ## Command Descriptions
+
 ### <i>Create Status Report</i>
+
 `Create Status Report` Command can be used to create your new status report of your incident, you can see the created report in Menubar.
+
 ### <i>Update Status Report</i>
+
 `Update Status Report` command can be used to see all the status report with optional filter by `status` to update the report by selecting specific report with lightning speed, no matter where you are you can also open update specific report by clicking on any unresolved report from menubar to update it blazingly fast.
+
 ### <i>Menu Bar Reports</i>
+
 `Menu Bar Reports` is the command that makes the Menubar possible which can let you navigate and update the selective reports, say good bye to context switching.
 
 ## Getting Started
-Get your AccessToken from (https://openstatus.dev)[https://openstatus.dev] If you have a Access token, navigate to Raycast Command settings for the extension by using `Cmd + ,` and set the Access token there
+
+Get your AccessToken from [https://openstatus.dev](https://openstatus.dev). If you have a Access token, navigate to Raycast Command settings for the extension by using `Cmd + ,` and set the Access token there
 
 <img width="1093" alt="Pic0" src="https://github.com/Nabhag8848/openstatus-raycast-extension/assets/65061890/6e3f0a5b-de30-46c2-ba3e-7c2cd0a228e5">
 
 ### Create Status Report
+
 Want to create a status report? Just fill what you need in your report—like the title, message, which pages and monitors to include, the status, and the date. Once done, press `Cmd + Enter` to create, you'll find your newly created report easily accessible in the menu bar. How cool is that ?
+
 <table border="0">
  <tr>
    <td>
@@ -44,6 +52,7 @@ Want to create a status report? Just fill what you need in your report—like th
 </table>
 
 ### Update Status Report & Menu Bar Reports
+
 Ready to fine-tune your status report? Just use the command 'update status report', and you'll see all your reports listed. You can filter them by status if needed. Choose the report you want to modify—whether it's changing the title, message, pages, monitors, status, or date—and make your updates. If you haven't created any reports yet, no problem! We'll help you create your very first one. After you're done, you can easily view your updated report in the menu bar. simplifying your report management!"
 
 <img width="1093" alt="Pic2" src="https://github.com/Nabhag8848/openstatus-raycast-extension/assets/65061890/39a15aab-85b0-4ff2-88af-5982a0047e44">
@@ -78,13 +87,3 @@ Ready to fine-tune your status report? Just use the command 'update status repor
   </td>
 </tr>
 </table>
-
-
-
-
-
-
-
-
-
-
