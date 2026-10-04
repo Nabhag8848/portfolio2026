@@ -25,7 +25,8 @@ function MiddleColumn() {
   return (
     <div>
       <p className="experience-desc">
-        I'm a machine-like human living every day like it's a battlefield.
+        I'm a machine-like human, challenging the status quo and living every
+        day like it's a battlefield.
         Previously founding engineer at an integration startup, and first
         engineer at a healthcare company that scaled past $1M ARR. Now focused
         on applied AI infra, distributed systems, durable workflows, and agent
