@@ -13,7 +13,7 @@ function App() {
     location.pathname.startsWith("/projects/");
 
   return (
-    <div className="container">
+    <div className={`container ${isSubPage ? "detail-open" : "detail-closed"}`}>
       <div className="left-stack">
         <div className="column left">
           <LeftColumn />

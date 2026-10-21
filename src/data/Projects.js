@@ -3,6 +3,23 @@ import repositoryCreatedAt from "./RepositoryCreatedAt.json";
 
 export const projects = [
   {
+    id: "sandbox-kit",
+    title: "Sandbox Kit",
+    desc: "portable cloud sandbox SDK",
+    date: "2026",
+    type: "image",
+    src: "/assets/sandbox-kit/sandbox-kit.png",
+    category: "tools",
+    status: "active",
+    clickable: true,
+    component: GenericProject,
+    about:
+      "A multi-provider SDK for creating and managing cloud sandboxes through one portable API. The Go and TypeScript clients share contracts, validation, and error kinds while keeping Daytona and Modal as independently installed providers.",
+    tech: ["Go", "TypeScript", "Protocol Buffers", "Protovalidate", "Daytona", "Modal"],
+    link: null,
+    gh: "https://github.com/sandbox-kit/kit",
+  },
+  {
     id: "orchex",
     title: "Orchex",
     desc: "durable workflow execution",
@@ -303,3 +320,39 @@ export const projects = [
   ...project,
   date: project.date || repositoryCreatedAt[project.id]?.slice(0, 4) || "",
 })).sort((a, b) => Number(b.date) - Number(a.date));
+
+// The portfolio is intentionally small: these are products people can try or
+// use today. The rest live as build notes below, where their implementation is
+// more useful than another card in the project gallery.
+const featuredProjectIds = new Set([
+  "sandbox-kit",
+  "orchex",
+  "lyo",
+  "ask-postgres",
+  "go-concurrency",
+]);
+
+export const featuredProjects = projects.filter((project) =>
+  featuredProjectIds.has(project.id),
+);
+
+export const buildNotes = projects.filter(
+  (project) => !featuredProjectIds.has(project.id),
+).map((project) => ({
+  ...project,
+  buildHeadline: {
+    "customer-support-agent": "A support agent that can change its mind",
+    "personal-assistant": "Building an assistant that knows when to ask",
+    "progressive-skill-disclosure": "Teaching an agent to reach for the right skill",
+    "knowledge-router": "One question, three knowledge sources, one answer",
+    "log-analyzer": "Turning noisy logs into useful leads",
+    "financial-integration": "The unglamorous work of keeping financial data in sync",
+    "carrier-integration": "One shipping API, many carrier quirks",
+    "nearby-clinics": "Finding the right clinic from a pin on the map",
+    "twenty-raycast": "Putting Twenty CRM a keystroke away",
+    "covercraft": "Sending a Figma cover straight to Hashnode",
+    "openstatus-raycast": "Making status updates feel native in Raycast",
+    "notion-integration": "Bringing Notion into the Rocket.Chat conversation",
+    "ai-integration": "A meme bot for the Rocket.Chat sidebar",
+  }[project.id] || `Notes from building ${project.title}`,
+}));

@@ -1,27 +1,7 @@
-import { useEffect, useState } from "react";
 import Work from "../components/Work";
-import { useNavigate, useLocation, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function MiddleColumn() {
-  const navigate = useNavigate();
-  const [activeFilter, setActiveFilter] = useState("all");
-  const location = useLocation();
-
-  useEffect(() => {
-    const m = location.pathname.match(/^\/c\/(integrations|extensions|tools)$/);
-    if (m) {
-      setActiveFilter(m[1]);
-    } else if (location.pathname === "/") {
-      setActiveFilter("all");
-    }
-    // When on /projects/:id, don't change the filter — keep current selection
-  }, [location.pathname]);
-
-  const handleFilterChange = (filter) => {
-    setActiveFilter(filter);
-    navigate(filter === "all" ? "/" : `/c/${filter}`);
-  };
-
   return (
     <div>
       <p className="experience-desc">
@@ -41,7 +21,7 @@ function MiddleColumn() {
       </p>
 
       <div className="experience-section">
-        <h3 className="section-header">Experience</h3>
+        <h3 className="section-header">EXPERIENCES</h3>
 
         <div className="experience-item">
           <div className="experience-header">
@@ -63,7 +43,7 @@ function MiddleColumn() {
           <ul className="experience-desc experience-bullets">
             <li>
               Recovered from severe Vitamin D3/B12 deficiencies that impaired cognition and communication.{" "}
-              <Link className="green-link" to="/blog/sabbatical">Read the journey</Link>.
+              <Link className="journey-link" to="/blog/sabbatical">Read the journey →</Link>
             </li>
           </ul>
         </div>
@@ -174,7 +154,7 @@ function MiddleColumn() {
         </div>
       </div>
 
-      <Work activeFilter={activeFilter} onFilterChange={handleFilterChange} />
+      <Work />
     </div>
   );
 }

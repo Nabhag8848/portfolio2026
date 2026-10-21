@@ -14,7 +14,13 @@ function ProjectCard({ project, onClick }) {
       ) : project.type === "placeholder" ? null : (
         <img src={project.src} alt={project.title} width="100%" />
       )}
-      {project.type !== "placeholder" && (
+      {project.type === "placeholder" ? (
+        <div className="project-card-placeholder">
+          <p>{project.title}</p>
+          <p>{project.desc}</p>
+          <span>{project.category}</span>
+        </div>
+      ) : (
         <div
           style={{
             marginTop: "8px",

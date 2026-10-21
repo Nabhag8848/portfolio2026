@@ -1,47 +1,23 @@
-import { projects } from "../data/Projects";
+import { buildNotes, featuredProjects } from "../data/Projects";
 import "../App.css";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function Work({ activeFilter, onFilterChange }) {
-  const filters = ["all", "agents", "integrations", "extensions", "tools"];
+function Work() {
   const navigate = useNavigate();
-  const location = useLocation();
-  const isProjectDetail = location.pathname.startsWith("/projects/");
-
-  const filteredProjects =
-    activeFilter === "all"
-      ? projects
-      : projects.filter((project) => project.category === activeFilter);
 
   const handleProjectClick = (project) => {
     if (project?.id) {
-      navigate(`/projects/${project.id}`, { replace: isProjectDetail });
+      navigate(`/projects/${project.id}`, { replace: true });
     }
-  };
-
-  const handleFilterClick = (filter) => {
-    onFilterChange(filter);
   };
 
   return (
     <div className="terminal-container">
       <h3 className="section-header">Projects</h3>
-      <nav className="terminal-nav">
-        {filters.map((filter) => (
-          <button
-            key={filter}
-            className={`nav-button ${activeFilter === filter ? "active" : ""}`}
-            onClick={() => handleFilterClick(filter)}
-          >
-            {filter}
-          </button>
-        ))}
-      </nav>
-
       <div className="divider"></div>
 
       <div className="terminal-content">
-        {filteredProjects.map((project) => (
+        {featuredProjects.map((project) => (
           <div
             key={project.id}
             className="project-row"
@@ -57,6 +33,27 @@ function Work({ activeFilter, onFilterChange }) {
           </div>
         ))}
       </div>
+
+      <section className="build-notes" aria-labelledby="blog-title">
+        <div className="build-notes-heading">
+          <h3 className="section-header" id="blog-title">BLOGS</h3>
+        </div>
+        <div className="divider"></div>
+        <div className="terminal-content">
+          {buildNotes.map((project) => (
+            <button
+              key={project.id}
+              className="project-row build-note-row"
+              onClick={() => navigate(`/blog/${project.id}`, { replace: true })}
+            >
+              <span>{project.buildHeadline}</span>
+              <span className="project-time">
+                <time className="year-badge" dateTime={project.date}>{project.date}</time>
+              </span>
+            </button>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

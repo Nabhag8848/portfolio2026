@@ -14,7 +14,7 @@ export default function ProjectDetail() {
     <div className="right-column-scroll-container">
       <ProjectComponent
         project={project}
-        onBack={() => navigate(-1)}
+        onBack={() => navigate("/")}
       />
     </div>
   );
