@@ -765,6 +765,26 @@ a {
   .build-notes-heading p {
     text-align: left;
   }
+
+  .build-notes,
+  .build-notes .terminal-content {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .build-note-row {
+    grid-template-columns: minmax(0, 1fr) 10ch;
+    white-space: normal;
+    min-width: 0;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .build-note-row > span:first-child {
+    min-width: 0;
+    line-height: 1.45;
+    overflow-wrap: break-word;
+  }
 }
 
 .time-text {
