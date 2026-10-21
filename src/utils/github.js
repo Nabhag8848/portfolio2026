@@ -59,15 +59,6 @@ export const getStatus = (pr) => {
 
 export const fetchGitHubPage = async (page, perPage = 100) => {
   const url = `https://api.github.com/search/issues?q=author:nabhag8848+is:pr+is:merged+-user:nabhag8848+-user:nabhag9949+is:public&per_page=${perPage}&page=${page}`;
-  const cacheKey = `github-contributions:v3:${page}:${perPage}`;
-  const cacheTtl = 15 * 60 * 1000;
-
-  try {
-    const cached = JSON.parse(localStorage.getItem(cacheKey) || "null");
-    if (cached && Date.now() - cached.timestamp < cacheTtl) return cached.data;
-  } catch {
-    // Storage is optional (private browsing and blocked storage are supported).
-  }
 
   const response = await fetch(url, {
     headers: { Accept: "application/vnd.github+json" },
@@ -78,26 +69,14 @@ export const fetchGitHubPage = async (page, perPage = 100) => {
   }
 
   const data = await response.json();
-
   const filteredItems = data.items.filter(isValidContribution);
 
-  const result = {
+  return {
     ...data,
     items: filteredItems,
     filtered_count: filteredItems.length,
     original_count: data.items.length,
   };
-
-  try {
-    localStorage.setItem(
-      cacheKey,
-      JSON.stringify({ timestamp: Date.now(), data: result }),
-    );
-  } catch {
-    // A full or unavailable cache must never block the page.
-  }
-
-  return result;
 };
 
 export const shouldStopFetching = (currentPage, perPage, data) => {
