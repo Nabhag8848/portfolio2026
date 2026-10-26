@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { profiles } from "../data/profiles";
 
 function LeftColumn() {
   return (
@@ -18,32 +19,32 @@ function LeftColumn() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/Nabhag8848"
+              href={profiles.github}
             >
               Github
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://x.com/NabhagMotivaras"
+              href={profiles.twitter}
             >
               Twitter
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://linkedin.com/in/nabhagmotivaras"
+              href={profiles.linkedin}
             >
               LinkedIn
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://leetcode.com/u/NabhagMotivaras/"
+              href={profiles.leetcode}
             >
               LeetCode
             </a>
-            <a href="mailto:motivaras.nabhag@gmail.com">Mail</a>
+            <a href={profiles.mail}>Mail</a>
           </span>
         </div>
       </div>

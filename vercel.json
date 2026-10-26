@@ -36,5 +36,77 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/github",
+      "destination": "https://github.com/Nabhag8848",
+      "permanent": false
+    },
+    {
+      "source": "/github/",
+      "destination": "https://github.com/Nabhag8848",
+      "permanent": false
+    },
+    {
+      "source": "/twitter",
+      "destination": "https://x.com/NabhagMotivaras",
+      "permanent": false
+    },
+    {
+      "source": "/twitter/",
+      "destination": "https://x.com/NabhagMotivaras",
+      "permanent": false
+    },
+    {
+      "source": "/x",
+      "destination": "https://x.com/NabhagMotivaras",
+      "permanent": false
+    },
+    {
+      "source": "/x/",
+      "destination": "https://x.com/NabhagMotivaras",
+      "permanent": false
+    },
+    {
+      "source": "/linkedin",
+      "destination": "https://linkedin.com/in/nabhagmotivaras",
+      "permanent": false
+    },
+    {
+      "source": "/linkedin/",
+      "destination": "https://linkedin.com/in/nabhagmotivaras",
+      "permanent": false
+    },
+    {
+      "source": "/leetcode",
+      "destination": "https://leetcode.com/u/NabhagMotivaras/",
+      "permanent": false
+    },
+    {
+      "source": "/leetcode/",
+      "destination": "https://leetcode.com/u/NabhagMotivaras/",
+      "permanent": false
+    },
+    {
+      "source": "/mail",
+      "destination": "mailto:motivaras.nabhag@gmail.com",
+      "permanent": false
+    },
+    {
+      "source": "/mail/",
+      "destination": "mailto:motivaras.nabhag@gmail.com",
+      "permanent": false
+    },
+    {
+      "source": "/email",
+      "destination": "mailto:motivaras.nabhag@gmail.com",
+      "permanent": false
+    },
+    {
+      "source": "/email/",
+      "destination": "mailto:motivaras.nabhag@gmail.com",
+      "permanent": false
+    }
+  ],
   "rewrites": [{ "source": "/((?!assets/).*)", "destination": "/index.html" }]
 }
