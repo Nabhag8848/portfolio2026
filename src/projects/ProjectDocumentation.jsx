@@ -150,7 +150,7 @@ const readmeLoaders = import.meta.glob("../data/docs/readmes/*.md", {
 const documentation = {
   orchex: {
     source: orchexDocumentation,
-    base: "https://github.com/Nabhag8848/orchex/blob/main/docs/",
+    base: "https://github.com/Nabhag8848/orchex/blob/main/",
   },
   lyo: {
     source: lyoDocumentation,

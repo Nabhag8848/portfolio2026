@@ -1,4 +1,9 @@
 {
+  "sandbox-kit": {
+    "sourceUrl": "https://github.com/sandbox-kit/kit/blob/main/README.md",
+    "base": "https://github.com/sandbox-kit/kit/blob/main/",
+    "rawBase": "https://raw.githubusercontent.com/sandbox-kit/kit/main/"
+  },
   "twenty-raycast": {
     "sourceUrl": "https://github.com/raycast/extensions/blob/main/extensions/twenty/README.md",
     "base": "https://github.com/raycast/extensions/blob/main/extensions/twenty/",
