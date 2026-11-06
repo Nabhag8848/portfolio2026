@@ -6,11 +6,9 @@ function MiddleColumn() {
     <div>
       <p className="experience-desc">
         I'm a machine-like human, challenging the status quo and living every
-        day like it's a battlefield.
-        Previously founding engineer at an integration startup, and first
-        engineer at a healthcare company that scaled past $1M ARR. Now focused
-        on applied AI infra, distributed systems, durable workflows, and agent
-        orchestration at scale.
+        day like it's a battlefield. I used to build integrations — now my focus
+        is on applied AI infra, distributed systems, durable workflows, and
+        agent orchestration at scale.
       </p>
       <p className="experience-desc">
         For more details, check out my{" "}
@@ -29,7 +27,14 @@ function MiddleColumn() {
             <span className="experience-date">Dec 2025 – present</span>
           </div>
           <ul className="experience-desc experience-bullets">
-            <li>Delivered NDA contracts, including a video-downloader extension, while focusing on <span className="green-highlight">workflow and sandbox infra</span>.</li>
+            <li>
+              Delivered NDA contracts, including a video-downloader extension,
+              while focusing on{" "}
+              <span className="green-highlight">
+                workflow and sandbox infra
+              </span>
+              .
+            </li>
           </ul>
         </div>
 
@@ -42,8 +47,11 @@ function MiddleColumn() {
           </div>
           <ul className="experience-desc experience-bullets">
             <li>
-              Recovered from severe Vitamin D3/B12 deficiencies that impaired cognition and communication.{" "}
-              <Link className="journey-link" to="/blog/sabbatical">Read the journey →</Link>
+              Recovered from severe Vitamin D3/B12 deficiencies that impaired
+              cognition and communication.{" "}
+              <Link className="journey-link" to="/blog/sabbatical">
+                Read the journey →
+              </Link>
             </li>
           </ul>
         </div>
@@ -61,13 +69,36 @@ function MiddleColumn() {
             <span className="experience-date">Sep 2024 - May 2025</span>
           </div>
           <ul className="experience-desc experience-bullets">
-            <li>First engineer for a platform serving <span className="green-highlight">75K+ users</span>, <span className="green-highlight">250K+ teleconsults</span>, and <span className="green-highlight">$1M+ ARR</span>.</li>
             <li>
-              Designed the core data platform and built auth, onboarding, scheduling, payments, and RBAC systems.{" "}
-              <a className="green-link" href="https://dbdiagram.io/d/Prisma-Generated-66f4e6c53430cb846ca92ea6" target="_blank" rel="noopener noreferrer">Database schema</a>.
+              First engineer for a platform serving{" "}
+              <span className="green-highlight">75K+ users</span>,{" "}
+              <span className="green-highlight">250K+ teleconsults</span>, and{" "}
+              <span className="green-highlight">$1M+ ARR</span>.
             </li>
-            <li>Built a queue-backed <span className="green-highlight">webhook ingestion pipeline</span> routing auth, form, scheduling, and payment events to services.</li>
-            <li>Migrated legacy data without loss; automated 15-minute unpaid-call cancellation and prescription templates.</li>
+            <li>
+              Designed the core data platform and built auth, onboarding,
+              scheduling, payments, and RBAC systems.{" "}
+              <a
+                className="green-link"
+                href="https://dbdiagram.io/d/Prisma-Generated-66f4e6c53430cb846ca92ea6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Database schema
+              </a>
+              .
+            </li>
+            <li>
+              Built a queue-backed{" "}
+              <span className="green-highlight">
+                webhook ingestion pipeline
+              </span>{" "}
+              routing auth, form, scheduling, and payment events to services.
+            </li>
+            <li>
+              Migrated legacy data without loss; automated 15-minute unpaid-call
+              cancellation and prescription templates.
+            </li>
           </ul>
         </div>
 
@@ -84,10 +115,26 @@ function MiddleColumn() {
             <span className="experience-date">May 2024 - Aug 2024</span>
           </div>
           <ul className="experience-desc experience-bullets">
-            <li>Built <span className="green-highlight">Svix-backed webhooks</span> to deliver integration events and keep customer systems in sync.</li>
-            <li>Implemented <span className="green-highlight">two-way sync</span> across third-party integrations with normalized resources and field mappings.</li>
-            <li>Built <span className="green-highlight">OAuth flows</span> with authorization, token refresh, and failure handling across integrations.</li>
-            <li>Adapted an <span className="green-highlight">isomorphic JavaScript SDK</span> for React, Vue, Angular, and customer workflows.</li>
+            <li>
+              Built{" "}
+              <span className="green-highlight">Svix-backed webhooks</span> to
+              deliver integration events and keep customer systems in sync.
+            </li>
+            <li>
+              Implemented <span className="green-highlight">two-way sync</span>{" "}
+              across third-party integrations with normalized resources and
+              field mappings.
+            </li>
+            <li>
+              Built <span className="green-highlight">OAuth flows</span> with
+              authorization, token refresh, and failure handling across
+              integrations.
+            </li>
+            <li>
+              Adapted an{" "}
+              <span className="green-highlight">isomorphic JavaScript SDK</span>{" "}
+              for React, Vue, Angular, and customer workflows.
+            </li>
           </ul>
         </div>
 
@@ -106,8 +153,16 @@ function MiddleColumn() {
           <ul className="experience-desc experience-bullets">
             <li>
               Mentored the GSoC 2024{" "}
-              <a className="green-link" href="https://summerofcode.withgoogle.com/archive/2024/projects/41d12z0y" target="_blank" rel="noopener noreferrer">AI GIF Generator</a>
-              {" "}and led <span className="green-highlight">Rocket.Chat Apps</span> framework workshops.
+              <a
+                className="green-link"
+                href="https://summerofcode.withgoogle.com/archive/2024/projects/41d12z0y"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                AI GIF Generator
+              </a>{" "}
+              and led <span className="green-highlight">Rocket.Chat Apps</span>{" "}
+              framework workshops.
             </li>
           </ul>
         </div>
@@ -126,12 +181,33 @@ function MiddleColumn() {
           </div>
           <ul className="experience-desc experience-bullets">
             <li>
-              Built a <span className="green-highlight">Notion integration</span> for product managers to manage pages, tasks, and comments in Rocket.Chat, helping the company close more sales deals.{" "}
-              <a className="green-link" href="https://www.youtube.com/watch?v=G1fZBqy5jp8" target="_blank" rel="noopener noreferrer">Demo</a>
+              Built a{" "}
+              <span className="green-highlight">Notion integration</span> for
+              product managers to manage pages, tasks, and comments in
+              Rocket.Chat, helping the company close more sales deals.{" "}
+              <a
+                className="green-link"
+                href="https://www.youtube.com/watch?v=G1fZBqy5jp8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Demo
+              </a>
               {" · "}
-              <a className="green-link" href="https://www.figma.com/file/1Tk99mGHBmbQpOiT3vP17i/NotionApp" target="_blank" rel="noopener noreferrer">Design</a>
+              <a
+                className="green-link"
+                href="https://www.figma.com/file/1Tk99mGHBmbQpOiT3vP17i/NotionApp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Design
+              </a>
             </li>
-            <li>Built backward-compatible Notion OAuth2 flows for connecting and switching between multiple Notion workspaces on a platform serving <span className="green-highlight">12 million users</span>.</li>
+            <li>
+              Built backward-compatible Notion OAuth2 flows for connecting and
+              switching between multiple Notion workspaces on a platform serving{" "}
+              <span className="green-highlight">12 million users</span>.
+            </li>
           </ul>
         </div>
 
@@ -148,8 +224,16 @@ function MiddleColumn() {
             <span className="experience-date">May 2022 - Jun 2022</span>
           </div>
           <ul className="experience-desc experience-bullets">
-            <li>Built a market data pipeline delivering crypto-derivative spreads from 4 exchanges in under <span className="green-highlight">100ms</span>.</li>
-            <li>Merged concurrent bid/ask streams with <span className="green-highlight">RxJS</span>, pushing updates to clients via <span className="green-highlight">SSE</span>.</li>
+            <li>
+              Built a market data pipeline delivering crypto-derivative spreads
+              from 4 exchanges in under{" "}
+              <span className="green-highlight">100ms</span>.
+            </li>
+            <li>
+              Merged concurrent bid/ask streams with{" "}
+              <span className="green-highlight">RxJS</span>, pushing updates to
+              clients via <span className="green-highlight">SSE</span>.
+            </li>
           </ul>
         </div>
       </div>
