@@ -1327,19 +1327,31 @@ li {
 
 .resume-container {
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 100%;
+  box-sizing: border-box;
 }
 
 .resume-iframe {
   width: 100%;
-  height: calc(100vh - 120px);
+  /* Tall enough for a multi-page resume so the right column scrolls
+     instead of trapping scroll inside the Drive embed. */
+  height: max(calc(100vh - 120px), 2200px);
   border: none;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(153, 153, 153, 0.12);
+  background: #1a1a1a;
 }
 
 @media (max-width: 768px) {
+  .resume-container {
+    padding: 20px;
+  }
+
   .resume-iframe {
-    height: calc(100vh - 80px);
+    height: max(calc(100dvh - 80px), 2000px);
   }
 }
 

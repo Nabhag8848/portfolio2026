@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Resume() {
   const resumeUrl =
-    "https://drive.google.com/file/d/1KSARezR8vDXy1-QAi7VpEiB7CsdG5Zk5/preview";
+    "https://drive.google.com/file/d/1ETrLf4hOxm5MTTkbat0_nzty4u_EifXh/preview";
 
   return (
     <div className="resume-container">
