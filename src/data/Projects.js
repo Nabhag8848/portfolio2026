@@ -4,7 +4,7 @@ import repositoryCreatedAt from "./RepositoryCreatedAt.json";
 export const projects = [
   {
     id: "sandbox-kit",
-    title: "Sandbox Kit",
+    title: "sandbox-kit",
     desc: "portable cloud sandbox SDK",
     date: "2026",
     type: "image",
@@ -15,13 +15,37 @@ export const projects = [
     component: GenericProject,
     about:
       "A multi-provider SDK for creating and managing cloud sandboxes through one portable API. The Go and TypeScript clients share contracts, validation, and error kinds while keeping Daytona and Modal as independently installed providers.",
-    tech: ["Go", "TypeScript", "Protocol Buffers", "Protovalidate", "Daytona", "Modal"],
+    tech: [
+      "Go",
+      "TypeScript",
+      "Protocol Buffers",
+      "Protovalidate",
+      "Daytona",
+      "Modal",
+    ],
     link: null,
     gh: "https://github.com/sandbox-kit/kit",
   },
   {
+    id: "sandbox-directory",
+    title: "sandbox.directory",
+    desc: "agent sandbox directory",
+    date: "2026",
+    type: "image",
+    src: "/assets/sandbox-directory/logo.png",
+    category: "tools",
+    status: "active",
+    clickable: true,
+    component: GenericProject,
+    about:
+      "A searchable, open-source directory of agent sandbox providers—hosted runtimes, browsers, VMs, and self-hosted options. No account required: search the inventory and jump to each vendor. Provider data is curated from public indexes and refreshed through a Firecrawl-backed sync pipeline in GitHub Actions.",
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "Firecrawl"],
+    link: "https://sandbox.directory",
+    gh: "https://github.com/sandbox-kit/directory",
+  },
+  {
     id: "orchex",
-    title: "Orchex",
+    title: "orchex",
     desc: "durable workflow execution",
     date: "",
     type: "image",
@@ -32,13 +56,21 @@ export const projects = [
     component: GenericProject,
     about:
       "A durable workflow orchestration and execution engine for versioned DAGs. Build a graph, publish an immutable version, and run it with reliable retry and resume semantics. Separate builder and execution APIs use PostgreSQL to persist run state and a transactional outbox to dispatch node jobs through SQS. Workers execute API calls, conditional branches, and JavaScript functions in a Lambda sandbox, with infrastructure managed through Terraform on AWS ECS Fargate.",
-    tech: ["Go", "PostgreSQL", "AWS SQS", "AWS Lambda", "AWS ECS Fargate", "Terraform", "Docker"],
+    tech: [
+      "Go",
+      "PostgreSQL",
+      "AWS SQS",
+      "AWS Lambda",
+      "AWS ECS Fargate",
+      "Terraform",
+      "Docker",
+    ],
     link: null,
     gh: "https://github.com/Nabhag8848/orchex",
   },
   {
     id: "lyo",
-    title: "LYO",
+    title: "lyo",
     desc: "virtual fitting room",
     date: "",
     type: "video",
@@ -73,7 +105,7 @@ export const projects = [
   },
   {
     id: "go-concurrency",
-    title: "Go Concurrency",
+    title: "go-concurrency",
     desc: "interactive concurrency guide",
     date: "",
     type: "video",
@@ -90,7 +122,7 @@ export const projects = [
   },
   {
     id: "customer-support-agent",
-    title: "Customer Support Agent",
+    title: "customer-support-agent",
     desc: "state-machine support agent",
     date: "",
     type: "placeholder",
@@ -107,7 +139,7 @@ export const projects = [
   },
   {
     id: "personal-assistant",
-    title: "Personal Assistant",
+    title: "personal-assistant",
     desc: "supervisor + human-in-the-loop",
     date: "",
     type: "video",
@@ -124,7 +156,7 @@ export const projects = [
   },
   {
     id: "progressive-skill-disclosure",
-    title: "Progressive Skill Disclosure",
+    title: "progressive-skill-disclosure",
     desc: "load skills on demand",
     date: "",
     type: "placeholder",
@@ -141,7 +173,7 @@ export const projects = [
   },
   {
     id: "knowledge-router",
-    title: "Multi-Source Knowledge Router",
+    title: "knowledge-router",
     desc: "parallel query routing",
     date: "",
     type: "video",
@@ -158,7 +190,7 @@ export const projects = [
   },
   {
     id: "log-analyzer",
-    title: "Log Analyzer",
+    title: "log-analyzer",
     desc: "anomaly detection in logs",
     date: "",
     type: "placeholder",
@@ -175,7 +207,7 @@ export const projects = [
   },
   {
     id: "notion-integration",
-    title: "Notion x Rocket.Chat",
+    title: "notion-integration",
     desc: "Rocketchat App",
     date: "",
     type: "image",
@@ -193,7 +225,7 @@ export const projects = [
   },
   {
     id: "twenty-raycast",
-    title: "Twenty CRM Extension",
+    title: "twenty-raycast",
     desc: "Raycast extension",
     date: "2024",
     type: "image",
@@ -211,7 +243,7 @@ export const projects = [
   },
   {
     id: "ai-integration",
-    title: "AI Meme Bot",
+    title: "ai-integration",
     desc: "Rocketchat App",
     date: "",
     type: "image",
@@ -228,7 +260,7 @@ export const projects = [
   },
   {
     id: "financial-integration",
-    title: "Financial Integration",
+    title: "financial-integration",
     desc: "OAuth2 sync service",
     date: "",
     type: "image",
@@ -246,7 +278,7 @@ export const projects = [
   },
   {
     id: "nearby-clinics",
-    title: "Nearby Clinics",
+    title: "nearby-clinics",
     desc: "location-based search",
     date: "",
     type: "image",
@@ -265,7 +297,7 @@ export const projects = [
 
   {
     id: "covercraft",
-    title: "CoverCraft",
+    title: "covercraft",
     desc: "Figma x Hashnode plugin",
     date: "",
     type: "image",
@@ -283,7 +315,7 @@ export const projects = [
   },
   {
     id: "openstatus-raycast",
-    title: "OpenStatus Extension",
+    title: "openstatus-raycast",
     desc: "Raycast extension",
     date: "",
     type: "image",
@@ -301,7 +333,7 @@ export const projects = [
   },
   {
     id: "carrier-integration",
-    title: "Carrier Integration",
+    title: "carrier-integration",
     desc: "shipping rate quotes",
     date: "",
     type: "image",
@@ -316,16 +348,19 @@ export const projects = [
     link: null,
     gh: "https://github.com/Nabhag8848/ups-integration-service",
   },
-].map((project) => ({
-  ...project,
-  date: project.date || repositoryCreatedAt[project.id]?.slice(0, 4) || "",
-})).sort((a, b) => Number(b.date) - Number(a.date));
+]
+  .map((project) => ({
+    ...project,
+    date: project.date || repositoryCreatedAt[project.id]?.slice(0, 4) || "",
+  }))
+  .sort((a, b) => Number(b.date) - Number(a.date));
 
 // The portfolio is intentionally small: these are products people can try or
 // use today. The rest live as build notes below, where their implementation is
 // more useful than another card in the project gallery.
 const featuredProjectIds = new Set([
   "sandbox-kit",
+  "sandbox-directory",
   "orchex",
   "lyo",
   "ask-postgres",
@@ -336,23 +371,27 @@ export const featuredProjects = projects.filter((project) =>
   featuredProjectIds.has(project.id),
 );
 
-export const buildNotes = projects.filter(
-  (project) => !featuredProjectIds.has(project.id),
-).map((project) => ({
-  ...project,
-  buildHeadline: {
-    "customer-support-agent": "A support agent that can change its mind",
-    "personal-assistant": "Building an assistant that knows when to ask",
-    "progressive-skill-disclosure": "Teaching an agent to reach for the right skill",
-    "knowledge-router": "One question, three knowledge sources, one answer",
-    "log-analyzer": "Turning noisy logs into useful leads",
-    "financial-integration": "The unglamorous work of keeping financial data in sync",
-    "carrier-integration": "One shipping API, many carrier quirks",
-    "nearby-clinics": "Finding the right clinic from a pin on the map",
-    "twenty-raycast": "Putting Twenty CRM a keystroke away",
-    "covercraft": "Sending a Figma cover straight to Hashnode",
-    "openstatus-raycast": "Making status updates feel native in Raycast",
-    "notion-integration": "Bringing Notion into the Rocket.Chat conversation",
-    "ai-integration": "A meme bot for the Rocket.Chat sidebar",
-  }[project.id] || `Notes from building ${project.title}`,
-}));
+export const buildNotes = projects
+  .filter((project) => !featuredProjectIds.has(project.id))
+  .map((project) => ({
+    ...project,
+    buildHeadline:
+      {
+        "customer-support-agent": "A support agent that can change its mind",
+        "personal-assistant": "Building an assistant that knows when to ask",
+        "progressive-skill-disclosure":
+          "Teaching an agent to reach for the right skill",
+        "knowledge-router": "One question, three knowledge sources, one answer",
+        "log-analyzer": "Turning noisy logs into useful leads",
+        "financial-integration":
+          "The unglamorous work of keeping financial data in sync",
+        "carrier-integration": "One shipping API, many carrier quirks",
+        "nearby-clinics": "Finding the right clinic from a pin on the map",
+        "twenty-raycast": "Putting Twenty CRM a keystroke away",
+        covercraft: "Sending a Figma cover straight to Hashnode",
+        "openstatus-raycast": "Making status updates feel native in Raycast",
+        "notion-integration":
+          "Bringing Notion into the Rocket.Chat conversation",
+        "ai-integration": "A meme bot for the Rocket.Chat sidebar",
+      }[project.id] || `Notes from building ${project.title}`,
+  }));
